@@ -1,0 +1,20 @@
+flowchart TD
+  App["App.jsx"]
+  Router["Router"]
+  Layout["Layout Component"]
+  Header["Header Component"]
+  Footer["Footer Component"]
+  Pages["Pages (Home, About, Contact)"]
+  State["Global State (useContext)"]
+  API["API Service"]
+  Styles["SCSS 7-1"]
+
+  App --> Router
+  Router --> Layout
+  Layout --> Header
+  Layout --> Footer
+  Layout --> Pages
+  App --> State
+  Pages --> API
+  Layout --> Styles
+
