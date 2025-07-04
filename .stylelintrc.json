@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-scss", "stylelint-selector-bem-pattern"],
+  "rules": {
+    "max-nesting-depth": 2,
+    "selector-class-pattern": "^[a-z0-9]+(?:__[a-z0-9]+)?(?:--[a-z0-9]+)?$",
+    "plugin/selector-bem-pattern": {
+      "preset": "bem",
+      "componentName": "[a-z]+",
+      "componentSelectors": {
+        "initial": "^\\.{component}(?:__[a-z0-9]+)?(?:--[a-z0-9]+)?$"
+      }
+    }
+  }
+}

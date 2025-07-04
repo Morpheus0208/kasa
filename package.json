@@ -22,7 +22,7 @@
     "build": "vite build",
     "lint": "eslint src --ext .js,.jsx",
     "lint:fix": "eslint src --ext .js,.jsx --fix",
-    "format": "prettier --write .",
+    "format": "prettier --write 'src/**/*.{js,jsx,scss,css,md}'",
     "preview": "vite preview",
     "doc": "jsdoc -c jsdoc.config.json",
     "lint:scss": "stylelint \"src/**/*.scss\"",
@@ -49,14 +49,15 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "globals": "^16.2.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "jsdoc": "^4.0.4",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
     "sass": "^1.89.2",
-    "stylelint": "^16.21.0",
+    "stylelint": "^16.21.1",
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-scss": "^6.12.1",
+    "stylelint-selector-bem-pattern": "^4.0.1",
     "vite": "^7.0.0"
   }
 }
