@@ -5,15 +5,19 @@
 
 import { Link } from 'react-router';
 import Footer from '../layout/Footer';
+import Main from '../layout/Main';
 import Navbar from '../layout/Navbar';
+import '../styles/pages/_error.scss';
 
 export default function Error() {
   return (
     <div>
       <Navbar />
-      <h1>404</h1>
-      <h2>Oups! La page que vous demandez n&apos existe pas.</h2>
-      <Link to="/">Retournez sur la page d&apos accueil </Link>
+      <Main modify="error">
+        <h1 className="h1">404</h1>
+        <h2 className="h2">Oups! La page que vous demandez n&apos; existe pas.</h2>
+        <Link to="/">Retournez sur la page d&apos; accueil </Link>
+      </Main>
       <Footer />
     </div>
   );

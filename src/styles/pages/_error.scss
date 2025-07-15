@@ -1,0 +1,44 @@
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+@use '../base/typography' as *;
+
+.h1 {
+  font-family: $font-family-base;
+  font-size: $font-size-extra-large;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-base;
+  color: $color-primary;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h2 {
+  font-family: $font-family-base;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $color-primary;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  font-family: $font-family-base;
+  font-size: $font-size-m;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $color-secondary;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

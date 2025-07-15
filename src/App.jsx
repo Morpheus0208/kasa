@@ -10,7 +10,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import DataProvider from './Context/DataProvider';
 import AppRoutes from './routes/AppRoutes';
 import './styles/_app.scss';
-import './styles/base/_reset.scss';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
