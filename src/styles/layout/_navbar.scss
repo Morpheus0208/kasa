@@ -1,0 +1,36 @@
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+@use '../base/typography' as *;
+
+.navbar {
+  width: 85%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // Logo à gauche, liens à droite
+  padding: 1rem 2rem;
+  background-color: $color-background-light;
+
+  &__logo {
+    img {
+      height: 40px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    text-decoration: none;
+    font-size: $font-size-l;
+    font-weight: $font-weight-normal;
+    color: $color-secondary;
+    line-height: $line-height-base;
+    font-family: $font-family-base;
+
+    &--active {
+      border-bottom: 2px solid $color-dark;
+    }
+  }
+}

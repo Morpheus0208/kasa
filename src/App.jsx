@@ -6,17 +6,18 @@
  */
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router';
-import AppRoutes from './AppRoutes';
-import Navbar from './styles/layout/Navbar';
-import Footer from './styles/layout/Footer';
+import { BrowserRouter as Router } from 'react-router-dom';
+import DataProvider from './Context/DataProvider';
+import AppRoutes from './routes/AppRoutes';
+import './styles/_app.scss';
+import './styles/base/_reset.scss';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router>
-      <Navbar />
-      <AppRoutes />
-      <Footer />
-    </Router>
+    <DataProvider>
+      <Router>
+        <AppRoutes />
+      </Router>
+    </DataProvider>
   </StrictMode>
 );

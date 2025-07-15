@@ -2,17 +2,15 @@
  * ✅ JSDoc : description du composant
  * Ce composant affiche Barre de navigation.
  */
-import { StrictMode } from 'react';
+import Nav from '../components/Links';
 import Logo from '../components/Logo';
-import Nav from '../components/Nav';
+import '../styles/layout/_navbar.scss';
 
 export default function Navbar() {
   return (
-    <StrictMode>
-      <div>
-        <Logo />
-        <Nav />
-      </div>
-    </StrictMode>
+    <nav className="navbar">
+      <Logo />
+      <Nav />
+    </nav>
   );
 }
