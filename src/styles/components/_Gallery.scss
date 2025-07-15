@@ -1,0 +1,14 @@
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+@use '../base/typography' as *;
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  background-color: $color-tertiary;
+  border-radius: 8px;
+}

@@ -1,0 +1,20 @@
+/// abstracts/_typography.scss
+
+// Familles de polices
+$font-primary: 'Montserrat', sans-serif;
+
+// Tailles de base
+$font-size-base: 1rem; // 16px
+$font-size-s: 0.875rem; // 14px
+$font-size-m: 1.125rem; // 18px
+$font-size-l: 1.25rem; // 24px
+$font-size-xl: 2.25rem; // 36px
+$font-size-xxl: 3rem; // 48px
+$font-size-extra-large: 18rem; // 288px
+
+// Poids
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+// Hauteurs de ligne
+$line-height-base: 1.43;

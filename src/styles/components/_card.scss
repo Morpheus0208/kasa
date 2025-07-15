@@ -1,0 +1,32 @@
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+@use '../base/typography' as *;
+
+.card {
+  width: 340px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  background-color: $color-background-light;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__image {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+  }
+
+  &__title {
+    padding: 1rem;
+    text-align: center;
+    font-size: $font-size-m;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    font-family: $font-family-base;
+  }
+}

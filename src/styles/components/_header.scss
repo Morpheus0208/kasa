@@ -1,0 +1,44 @@
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+@use '../base/typography' as *;
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 223px;
+  margin: 2rem auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  border: 1px solid $color-dark;
+  overflow: hidden;
+  box-shadow: 0 4px 4px 0 rgb(0 0 0 / 40%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%); // noir avec opacité
+    border-radius: 1rem;
+    mix-blend-mode: darken;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    text-align: center;
+    padding: 1rem;
+    font-size: $font-size-xxl;
+    font-weight: $font-weight-bold;
+    color: $color-light;
+    font-family: $font-primary;
+    line-height: $line-height-base;
+  }
+}

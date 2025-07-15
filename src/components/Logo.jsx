@@ -3,12 +3,12 @@
  * Ce composant affiche le logo de l'application KASA.
  * Il est utilisé dans la barre de navigation.
  */
-import { StrictMode } from 'react';
+import logo from '../assets/logo.png';
 
 export default function Logo() {
   return (
-    <StrictMode>
-      <img src="/logo.svg" alt="Logo Kasa" />
-    </StrictMode>
+    <div className="navbar__logo">
+      <img src={logo} alt="Logo Kasa" />
+    </div>
   );
 }

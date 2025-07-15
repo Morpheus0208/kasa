@@ -1,8 +1,8 @@
-import { Route, Routes } from 'react-router';
-import Home from './styles/pages/Home';
-import FicheLogement from './styles/pages/FicheLogement';
-import About from './styles/pages/About';
-import Error from './styles/pages/Error';
+import { Route, Routes } from 'react-router-dom';
+import About from '../pages/About';
+import Error from '../pages/Error';
+import FicheLogement from '../pages/FicheLogement';
+import Home from '../pages/Home';
 
 export default function AppRoutes() {
   return (

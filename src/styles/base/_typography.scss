@@ -1,0 +1,39 @@
+/// base/_typography.scss
+
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+
+body {
+  font-size: $font-size-l;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+}
+
+.h1__fichelogement {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-normal;
+  color: $color-primary;
+  font-family: $font-family-base;
+}
+
+.h1__error {
+  font-size: $font-size-extra-large;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  font-family: $font-family-base;
+}
+
+.h2__error {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-normal;
+  color: $color-primary;
+  font-family: $font-family-base;
+}
+
+p {
+  font-size: $font-size-m;
+  color: $color-secondary;
+  font-family: $font-family-base;
+}
