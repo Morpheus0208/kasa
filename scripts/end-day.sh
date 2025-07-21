@@ -1,34 +1,54 @@
 #!/usr/bin/env bash
-# Script to finalize the day's work in a trunk-based development workflow
-# - Lint + format
-# - Commit propre
-# - Merge main
-# - Supprimer la branche
+# Script de fin de journée pour trunk-based dev
+# ➡ Lint JSX et SCSS, fixer ce qui peut l'être
+# ➡ Commit final, merge dans main et clean branche
 
 set -e
 
 GREEN='\033[0;32m'
+RED='\033[0;31m'
 NC='\033[0m'
 
-echo -e "${GREEN}--- Lint & Format ---${NC}"
-npm run lint
-npm run lint:scss
-npm run format
+echo -e "${GREEN}--- Lint JSX (fix auto) ---${NC}"
+npx eslint src --ext .js,.jsx --fix || true
 
+echo -e "${GREEN}--- Vérification post-fix ESLint ---${NC}"
+npx eslint src --ext .js,.jsx
+
+echo -e "${GREEN}--- Lint SCSS (fix auto) ---${NC}"
+npx stylelint "src/**/*.scss" --fix || true
+
+echo -e "${GREEN}--- Vérification post-fix Stylelint ---${NC}"
+npx stylelint "src/**/*.scss"
+
+echo -e "${GREEN}✅ Lint terminé sans erreurs restantes.${NC}"
+
+echo -e "${GREEN}--- Format code avec Prettier ---${NC}"
+# Prettier pour formatter
+npx prettier --write "src/**/*.{js,jsx,scss,css,md}"
+
+echo -e "${GREEN}✅  format terminés.${NC}"
+
+# Ajout des modifications
 git add .
 
+# Message de commit
 read -p "Message du commit final: " COMMIT_MSG
 git commit -m "$COMMIT_MSG"
 
+# Branche courante
 CURRENT_BRANCH=$(git branch --show-current)
 
+# Push de la branche
 git push origin "$CURRENT_BRANCH"
 
+# Merge dans main
 git checkout main
 git pull origin main
 git merge --no-ff "$CURRENT_BRANCH"
 git push origin main
 
+# Suppression de la branche
 git branch -d "$CURRENT_BRANCH"
 git push origin --delete "$CURRENT_BRANCH"
 
