@@ -1,0 +1,22 @@
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+@use '../base/typography' as *;
+
+.rating {
+  display: flex;
+  gap: 4px;
+  margin-top: 1rem;
+}
+
+.rating__star {
+  font-size: $font-size-xl;
+
+  &--full {
+    color: $color-primary;
+  }
+
+  &--empty {
+    color: $color-star-empty;
+  }
+}

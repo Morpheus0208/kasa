@@ -12,7 +12,7 @@ export default function Nav() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? 'navbar__links navbar__links--active' : 'navbar__links'
+            isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
           }
         >
           Accueil
@@ -22,7 +22,7 @@ export default function Nav() {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            isActive ? 'navbar__links navbar__links--active' : 'navbar__links'
+            isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
           }
         >
           A Propos{' '}
