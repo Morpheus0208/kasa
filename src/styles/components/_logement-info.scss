@@ -1,0 +1,91 @@
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+@use '../base/typography' as *;
+
+.logement {
+  &_info {
+    margin-top: 20px;
+    font-family: $font-primary;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-base;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    &-left {
+      flex: 1 1 60%;
+    }
+
+    &-right {
+      flex: 1 1 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    &-title {
+      font-size: $font-size-xl;
+      color: $color-primary;
+    }
+
+    &-location {
+      font-size: $font-size-m;
+      color: $color-secondary;
+      margin: 10px 0;
+    }
+
+    &-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    &-tag {
+      background: $color-primary;
+      color: $color-light;
+      padding: 4px 10px;
+      border-radius: 5px;
+      font-size: $font-size-s;
+      font-weight: $font-weight-bold;
+    }
+
+    &-host {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &-rating {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+    }
+  }
+}
+
+.logement__host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logement__hostname {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: $font-size-m;
+  font-weight: $font-weight-normal;
+}
+
+.logement__hostavatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}

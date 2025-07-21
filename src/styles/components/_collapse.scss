@@ -1,0 +1,67 @@
+@use '../base/reset' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
+@use '../base/typography' as *;
+@use 'sass:color';
+
+.collapse {
+  margin-bottom: 1rem;
+  font-family: $font-primary;
+
+  &__header {
+    font-family: $font-primary;
+    background-color: $color-primary;
+    color: $color-light;
+    border: none;
+    width: 100%;
+    padding: 10px 20px 10px 10px;
+    border-radius: 10px;
+    font-size: $font-size-m;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-base;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -5%);
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: $color-background-light;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transition:
+      max-height 0.4s ease,
+      padding 0.3s ease;
+    padding: 0 1.2rem;
+
+    &--open {
+      max-height: 500px;
+      padding: 1.2rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .collapse__content ul {
+    padding-left: 1.2rem;
+  }
+
+  .collapse__content ul li {
+    margin-bottom: 0.3rem;
+  }
+}

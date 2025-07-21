@@ -1,0 +1,14 @@
+.logement {
+  &__collapse {
+    display: flex;
+    gap: 1rem;
+
+    &-item {
+      flex: 1;
+    }
+
+    @media (width <= 768px) {
+      flex-direction: column;
+    }
+  }
+}

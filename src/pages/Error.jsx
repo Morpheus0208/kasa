@@ -3,7 +3,7 @@
  * Ce composant affiche la page pour les erreurs 404.
  */
 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import Footer from '../layout/Footer';
 import Main from '../layout/Main';
 import Navbar from '../layout/Navbar';

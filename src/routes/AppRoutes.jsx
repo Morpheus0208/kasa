@@ -10,6 +10,7 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/fiche-logement/:id" element={<FicheLogement />} />
       <Route path="*" element={<Error />} />
+      <Route path="/error" element={<Error />} />
       <Route path="/about" element={<About />} />
     </Routes>
   );

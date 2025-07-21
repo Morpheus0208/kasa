@@ -2,7 +2,6 @@
  * ✅ JSDoc : description du composant
  * Ce composant affiche la page A Propos.
  */
-import DropDown from '../components/DropDown';
 import Header from '../components/Header';
 import Footer from '../layout/Footer';
 import Main from '../layout/Main';
@@ -15,7 +14,6 @@ export default function About() {
       <Navbar />
       <Main modifier="about">
         <Header modifier="about" />
-        <DropDown />
       </Main>
       <Footer />
     </div>
