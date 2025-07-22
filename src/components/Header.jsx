@@ -3,25 +3,19 @@
  * Ce composant affiche le header sur les pages de l'application Kasa.
  */
 import PropTypes from 'prop-types';
+
 import '../styles/components/_header.scss';
 
-export default function Header({ image, title }) {
-  const style = {
-    backgroundImage: `url(${image})`,
-  };
+export default function Header({ modifier, title }) {
   return (
-    <header className="header" style={style}>
+    <header className={`header${modifier ? ` header--${modifier}` : ''}`}>
       <div className="header__overlay" />
-      {title && (
-        <div className="header__content">
-          <h1 className="header__title">{title}</h1>
-        </div>
-      )}
+      {title && <h1 className="header__title">{title}</h1>}
     </header>
   );
 }
 Header.propTypes = {
-  image: PropTypes.string.isRequired,
+  modifier: PropTypes.string.isRequired,
   title: PropTypes.string,
 };
 Header.defaultProps = {

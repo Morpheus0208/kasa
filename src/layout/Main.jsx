@@ -6,13 +6,13 @@
 import PropTypes from 'prop-types';
 import '../styles/layout/_main.scss';
 
-export default function Main({ modify, children }) {
-  return <main className={`main${modify ? ` main--${modify}` : ''}`}>{children}</main>;
+export default function Main({ modifier, children }) {
+  return <main className={`main${modifier ? ` main--${modifier}` : ''}`}>{children}</main>;
 }
 Main.propTypes = {
-  modify: PropTypes.string,
+  modifier: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 Main.defaultProps = {
-  modify: '',
+  modifier: '',
 };

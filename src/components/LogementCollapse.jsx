@@ -3,14 +3,17 @@ import '../styles/components/_logement-collapse.scss';
 import Collapse from './Collapse';
 
 export default function LogementCollapse({ description, equipments }) {
+  const items = [
+    { id: 'desc', title: 'Description', content: description },
+    { id: 'equip', title: 'Équipements', content: equipments },
+  ];
   return (
     <div className="logement__collapse">
-      <div className="logement__collapse-item">
-        <Collapse title="Description" content={description} />
-      </div>
-      <div className="logement__collapse-item">
-        <Collapse title="Équipements" content={equipments} />
-      </div>
+      {items.map((item) => (
+        <div key={item.id} className="logement__collapse-item">
+          <Collapse title={item.title} content={item.content} className="collapse--logement" />
+        </div>
+      ))}
     </div>
   );
 }
