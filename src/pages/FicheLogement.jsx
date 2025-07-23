@@ -8,9 +8,7 @@ import LogementCollapse from '../components/LogementCollapse';
 import LogementInfo from '../components/LogementInfo';
 import Slider from '../components/Slider';
 import { useData } from '../Context/DataProvider';
-import Footer from '../layout/Footer';
 import Main from '../layout/Main';
-import Navbar from '../layout/Navbar';
 
 export default function FicheLogement() {
   const { id } = useParams();
@@ -27,13 +25,11 @@ export default function FicheLogement() {
   if (!logement) return null;
   return (
     <div>
-      <Navbar />
       <Main>
         <Slider images={logement.pictures} titre={logement.title} />
         <LogementInfo logement={logement} />
         <LogementCollapse description={logement.description} equipments={logement.equipments} />
       </Main>
-      <Footer />
     </div>
   );
 }
