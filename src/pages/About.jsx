@@ -4,9 +4,7 @@
  */
 import Collapse from '../components/Collapse';
 import Header from '../components/Header';
-import Footer from '../layout/Footer';
 import Main from '../layout/Main';
-import Navbar from '../layout/Navbar';
 
 export default function About() {
   const items = [
@@ -37,7 +35,6 @@ export default function About() {
   ];
   return (
     <div className="about">
-      <Navbar />
       <Main modifier="about">
         <Header modifier="about" />
         <section className="about__collapse">
@@ -48,7 +45,6 @@ export default function About() {
           ))}
         </section>
       </Main>
-      <Footer />
     </div>
   );
 }
