@@ -61,31 +61,27 @@
       gap: 10px;
     }
 
+    &-hostname {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: $font-size-m;
+      font-weight: $font-weight-normal;
+      color: $color-primary;
+      line-height: $line-height-base;
+    }
+
+    &-hostavatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     &-rating {
       display: flex;
       justify-content: flex-end;
       margin-top: 10px;
     }
   }
-}
-
-.logement__host {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logement__hostname {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  font-size: $font-size-m;
-  font-weight: $font-weight-normal;
-}
-
-.logement__hostavatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
 }
