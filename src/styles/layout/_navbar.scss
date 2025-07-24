@@ -14,7 +14,7 @@
 
   &__logo {
     img {
-      height: 40px;
+      height: 68px;
     }
   }
 
@@ -42,6 +42,26 @@
 
     &--active {
       border-bottom: 2px solid $color-dark;
+    }
+  }
+}
+
+@media (width <= 375px) {
+  .navbar {
+    width: 95%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+
+    &__logo img {
+      height: 46px;
+    }
+
+    &__links {
+      gap: 0.5rem;
+    }
+
+    &__link {
+      font-size: $font-size-mobile-s;
     }
   }
 }

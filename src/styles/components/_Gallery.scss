@@ -6,9 +6,15 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
-  padding: 2rem;
   background-color: $color-tertiary;
   border-radius: 8px;
+}
+
+@media (width >= 375px) {
+  .gallery {
+    gap: 2rem;
+    padding: 2rem;
+  }
 }

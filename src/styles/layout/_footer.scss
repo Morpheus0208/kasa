@@ -26,3 +26,18 @@
     font-family: $font-family-base;
   }
 }
+
+@media (width >= 375px) {
+  .footer {
+    padding: 3rem 1rem;
+
+    &__logo {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    &__text {
+      font-size: $font-size-mobile-s;
+    }
+  }
+}
