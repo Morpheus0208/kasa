@@ -21,7 +21,7 @@
 
   &__text {
     text-align: center;
-    font-size: $font-size-m;
+    font-size: $font-size-mobile-s;
     color: $color-tertiary;
     font-family: $font-family-base;
   }
@@ -37,7 +37,7 @@
     }
 
     &__text {
-      font-size: $font-size-mobile-s;
+      font-size: $font-size-m;
     }
   }
 }
