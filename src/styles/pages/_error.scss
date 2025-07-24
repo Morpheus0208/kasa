@@ -2,43 +2,63 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/typographyAbstracts' as *;
 @use '../base/typography' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/typographyAbstracts' as *;
 
-.h1 {
-  font-family: $font-family-base;
-  font-size: $font-size-extra-large;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-base;
-  color: $color-primary;
-  margin-bottom: 1rem;
+.error {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-}
-
-.h2 {
-  font-family: $font-family-base;
-  font-size: $font-size-xl;
-  font-weight: $font-weight-normal;
-  line-height: $line-height-base;
-  color: $color-primary;
-  margin-bottom: 1rem;
-  display: flex;
   align-items: center;
-  justify-content: center;
-}
+  text-align: center;
+  padding: 2rem;
 
-a {
-  font-family: $font-family-base;
-  font-size: $font-size-m;
-  font-weight: $font-weight-normal;
-  line-height: $line-height-base;
-  color: $color-secondary;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &__code {
+    font-family: $font-family-base;
+    font-size: $font-size-mobile-l;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-base;
+    color: $color-primary;
+    margin: 0 0 1rem;
+  }
 
-  &:hover {
+  &__text {
+    font-family: $font-family-base;
+    font-size: $font-size-m;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-base;
+    color: $color-primary;
+    margin-bottom: 1rem;
+    max-width: 300px;
+  }
+
+  &__link {
+    font-family: $font-family-base;
+    font-size: $font-size-s;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-base;
+    color: $color-secondary;
     text-decoration: underline;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+@media (width >= 375px) {
+  .error {
+    &__code {
+      font-size: $font-size-extra-large;
+    }
+
+    &__text {
+      font-size: $font-size-xl;
+      max-width: none;
+    }
+
+    &__link {
+      font-size: $font-size-m;
+    }
   }
 }
