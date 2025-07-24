@@ -5,11 +5,16 @@
 
 .about {
   &__collapse {
-    width: 100%;
-    margin: 2rem auto;
+    width: 85%;
+    margin: 1rem auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @media (width >= 375px) {
+      width: 70%;
+      gap: 1.5rem;
+    }
 
     &-item {
       width: 100%;
