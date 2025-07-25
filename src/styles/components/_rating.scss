@@ -6,17 +6,24 @@
 .rating {
   display: flex;
   gap: 4px;
-  margin-top: 1rem;
+
+  // margin-top: 1rem;
 }
 
 .rating__star {
-  font-size: $font-size-xl;
+  font-size: $font-size-m;
 
   &--full {
     color: $color-primary;
   }
 
-  &--empty {
+  &-empty {
     color: $color-star-empty;
+  }
+}
+
+@media (width >= 375px) {
+  .rating__star {
+    font-size: $font-size-xl;
   }
 }
