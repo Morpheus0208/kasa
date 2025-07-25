@@ -4,84 +4,132 @@
 @use '../base/typography' as *;
 
 .logement {
-  &_info {
-    margin-top: 20px;
-    font-family: $font-primary;
-    font-weight: $font-weight-normal;
-    line-height: $line-height-base;
+  margin-top: 10px;
+  font-family: $font-primary;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
 
-    &-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 
-    &-left {
-      flex: 1 1 60%;
-    }
+  &__left {
+    flex: 1 1 60%;
+  }
 
-    &-right {
-      flex: 1 1 30%;
+  &__right {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  &__title {
+    font-size: $font-size-m;
+    color: $color-primary;
+  }
+
+  &__location {
+    font-size: $font-size-s;
+    color: $color-secondary;
+    margin: 1rem 0;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__tag {
+    background: $color-primary;
+    color: $color-light;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: $font-size-mobile-xs;
+    font-weight: $font-weight-bold;
+  }
+
+  &__host {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &--name {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      justify-content: space-between;
-    }
-
-    &-title {
-      font-size: $font-size-xl;
-      color: $color-primary;
-    }
-
-    &-location {
-      font-size: $font-size-m;
-      color: $color-secondary;
-      margin: 10px 0;
-    }
-
-    &-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    &-tag {
-      background: $color-primary;
-      color: $color-light;
-      padding: 4px 10px;
-      border-radius: 5px;
+      justify-content: center;
       font-size: $font-size-s;
-      font-weight: $font-weight-bold;
-    }
-
-    &-host {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    &-hostname {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      font-size: $font-size-m;
       font-weight: $font-weight-normal;
       color: $color-primary;
-      line-height: $line-height-base;
+      line-height: 1.1;
     }
 
-    &-hostavatar {
-      width: 64px;
-      height: 64px;
+    &--avatar {
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       object-fit: cover;
     }
+  }
 
-    &-rating {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 10px;
+  &__rating {
+    display: flex;
+    justify-content: center;
+
+    // margin-top: 1rem;
+    font-size: $font-size-m;
+  }
+}
+
+@media (width >= 375px) {
+  .logement {
+    &__Container {
+      flex-direction: row;
+    }
+
+    &__right {
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-size: $font-size-xl;
+    }
+
+    &__location {
+      font-size: $font-size-m;
+    }
+
+    &__rating {
+      font-size: $font-size-xl;
+    }
+
+    &__tags {
+      justify-content: flex-start;
+      gap: 0.5rem;
+    }
+
+    &__tag {
+      font-size: $font-size-s;
+    }
+
+    &__host {
+      &--avatar {
+        width: 64px;
+        height: 64px;
+      }
+
+      &--name {
+        font-size: $font-size-m;
+      }
     }
   }
 }
