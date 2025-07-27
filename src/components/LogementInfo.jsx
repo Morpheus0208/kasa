@@ -1,3 +1,7 @@
+/**
+ * ✅ JSDoc : description du composant
+ * Ce composant affiche le composant qui permet l'affichage des elements d'informations du logement sous le slider
+ */
 import PropTypes from 'prop-types';
 import '../styles/components/_logement-info.scss';
 import Rating from './Rating';
@@ -7,7 +11,6 @@ export default function LogementInfo({ logement }) {
 
   return (
     <section className="logement">
-      endday
       <div className="logement__left">
         <h1 className="logement__title">{logement.title}</h1>
         <p className="logement__location">{logement.location}</p>

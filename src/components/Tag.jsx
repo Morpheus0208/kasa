@@ -1,6 +1,7 @@
 /**
  * ✅ JSDoc : description du composant
- * Ce composant affiche . Tag.
+ * Ce composant affiche le groupe de tags associés à un logement.
+ * Il est utilisé pour afficher les tags sous le titre du logement.
  */
 import PropTypes from 'prop-types';
 
