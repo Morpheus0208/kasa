@@ -1,3 +1,7 @@
+/**
+ * ✅ JSDoc : description du composant
+ * Ce composant est responsable de la gestion des routes de l'application.
+ */
 import { Route, Routes } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import About from '../pages/About';

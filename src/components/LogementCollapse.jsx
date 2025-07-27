@@ -1,3 +1,7 @@
+/**
+ * ✅ JSDoc : description du composant
+ * Ce composant affiche le contenu dans le collapse  de la page info logement
+ */
 import PropTypes from 'prop-types';
 import '../styles/components/_logement-collapse.scss';
 import Collapse from './Collapse';
