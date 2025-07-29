@@ -10,32 +10,37 @@ export default function LogementInfo({ logement }) {
   const [prenom, nom] = logement.host.name.split(' ');
 
   return (
-    <section className="logement">
-      <div className="logement__left">
-        <h1 className="logement__title">{logement.title}</h1>
-        <p className="logement__location">{logement.location}</p>
-        <div className="logement__tags">
-          {logement.tags.map((tag) => (
-            <span key={tag} className="logement__tag">
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-      <div className="logement__right">
-        <div className="logement__host">
-          <div className="logement__host--name">
-            <span>{prenom}</span>
-            <span>{nom}</span>
+    <section className="logementinfo">
+      <div className="logementinfo__container">
+        {/* LEFT BLOCK */}
+        <div className="logementinfo__left">
+          <h1 className="logementinfo__title">{logement.title}</h1>
+          <p className="logementinfo__location">{logement.location}</p>
+          <div className="logementinfo__tags">
+            {logement.tags.map((tag) => (
+              <span key={tag} className="logementinfo__tag">
+                {tag}
+              </span>
+            ))}
           </div>
-          <img
-            className="logement__host--avatar"
-            src={logement.host.picture}
-            alt={logement.host.name}
-          />
         </div>
-        <div className="logement__rating">
-          <Rating rating={logement.rating} />
+
+        {/* RIGHT BLOCK */}
+        <div className="logementinfo__right">
+          <div className="logementinfo__host">
+            <div className="logementinfo__host--name">
+              <span>{prenom}</span>
+              <span>{nom}</span>
+            </div>
+            <img
+              className="logementinfo__host--avatar"
+              src={logement.host.picture}
+              alt={logement.host.name}
+            />
+          </div>
+          <div className="logementinfo__rating">
+            <Rating rating={logement.rating} />
+          </div>
         </div>
       </div>
     </section>
@@ -52,6 +57,5 @@ LogementInfo.propTypes = {
       picture: PropTypes.string.isRequired,
     }).isRequired,
     rating: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
   }).isRequired,
 };

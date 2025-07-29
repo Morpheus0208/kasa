@@ -2,7 +2,6 @@
  * ✅ JSDoc : description du composant
  * Ce composant affiche le composant  Rating de l'appartement.
  */
-import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 import { faStar as faStarFull } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
@@ -17,7 +16,7 @@ export default function Rating({ rating }) {
       {stars.map((star, idx) => (
         <FontAwesomeIcon
           key={star.id}
-          icon={idx < value ? faStarFull : faStarEmpty}
+          icon={faStarFull}
           className={`rating__star ${idx < value ? 'rating__star--full' : 'rating__star--empty'}`}
         />
       ))}
