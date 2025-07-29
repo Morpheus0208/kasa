@@ -6,8 +6,6 @@
 .rating {
   display: flex;
   gap: 4px;
-
-  // margin-top: 1rem;
 }
 
 .rating__star {
@@ -17,7 +15,7 @@
     color: $color-primary;
   }
 
-  &-empty {
+  &--empty {
     color: $color-star-empty;
   }
 }
