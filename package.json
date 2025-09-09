@@ -62,6 +62,6 @@
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-scss": "^6.12.1",
     "stylelint-selector-bem-pattern": "^4.0.1",
-    "vite": "^7.0.4"
+    "vite": "^7.1.5"
   }
 }
