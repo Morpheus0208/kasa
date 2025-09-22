@@ -1,3 +1,7 @@
+/**
+ * ✅ JSDoc : description du composant
+ * Ce composant affiche le composant qui permet l'affichage des elements d'informations du logement sous le slider
+ */
 import PropTypes from 'prop-types';
 import '../styles/components/_logement-info.scss';
 import Rating from './Rating';
@@ -6,32 +10,35 @@ export default function LogementInfo({ logement }) {
   const [prenom, nom] = logement.host.name.split(' ');
 
   return (
-    <section className="logement_info">
-      <div className="logement_info-container">
-        <div className="logement_info-left">
-          <h1 className="logement_info-title">{logement.title}</h1>
-          <p className="logement_info-location">{logement.location}</p>
-          <div className="logement_info-tags">
+    <section className="logementinfo">
+      <div className="logementinfo__container">
+        {/* LEFT BLOCK */}
+        <div className="logementinfo__left">
+          <h1 className="logementinfo__title">{logement.title}</h1>
+          <p className="logementinfo__location">{logement.location}</p>
+          <div className="logementinfo__tags">
             {logement.tags.map((tag) => (
-              <span key={tag} className="logement_info-tag">
+              <span key={tag} className="logementinfo__tag">
                 {tag}
               </span>
             ))}
           </div>
         </div>
-        <div className="logement_info-right">
-          <div className="logement_info-host">
-            <div className="logement_info-hostname">
+
+        {/* RIGHT BLOCK */}
+        <div className="logementinfo__right">
+          <div className="logementinfo__host">
+            <div className="logementinfo__host--name">
               <span>{prenom}</span>
               <span>{nom}</span>
             </div>
             <img
-              className="logement_info-hostavatar"
+              className="logementinfo__host--avatar"
               src={logement.host.picture}
               alt={logement.host.name}
             />
           </div>
-          <div className="logement__info-rating">
+          <div className="logementinfo__rating">
             <Rating rating={logement.rating} />
           </div>
         </div>
@@ -50,6 +57,5 @@ LogementInfo.propTypes = {
       picture: PropTypes.string.isRequired,
     }).isRequired,
     rating: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
   }).isRequired,
 };

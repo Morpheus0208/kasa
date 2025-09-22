@@ -1,3 +1,7 @@
+/**
+ * ✅ JSDoc : description du composant
+ * Ce composant affiche le composant collapse des boutons
+ */
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import '../styles/components/_collapse.scss';

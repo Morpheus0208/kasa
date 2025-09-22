@@ -14,9 +14,7 @@ Application frontend moderne avec :
 - Vite
 - SCSS (pattern 7-1 + BEM)
 - ESLint + Prettier
-- Husky + Commitlint
-- GitHub Actions
-- Mermaid diagrams
+- Husky
 
 ---
 
@@ -41,8 +39,7 @@ npm run daily:commit Lancer le script de daily commit interactif
 Lint JS : config Airbnb + Prettier
 Lint SCSS : BEM + nesting max 2 niveaux
 Prettier : formatage homogène
-husky : hooks pré-commit et commit-msg
-Commitlint : Conventional Commits
+husky : hooks pré-commit 
 
 ##🌱 Structure du projet
 
@@ -54,13 +51,13 @@ src/
     ├── abstracts/      // variables, mixins, fonctions
     ├── base/           // reset, typographie
     ├── components/     // éléments UI BEM (boutons, cartes, etc.)
-    ├── layout/         // header, footer, grid
+    ├── layout/         // header, footer, layout
     ├── pages/          // styles spécifiques aux pages
-    ├── themes/         // dark/light mode (optionnel)
-    └── vendors/        // styles externes ou lib CSS
+    ├── themes/         // dark/light mode (optionnel)-non utilisé
+    └── vendors/        // styles externes ou lib CSS- non utilisé
 ```
 
-docs/ # Documentation Markdown + Mermaid
+docs/ # Documentation Markdown
 .husky/ # Hooks Git
 scripts/ # Scripts personnalisés
 
@@ -81,32 +78,7 @@ Exemple :
 
 feat(flag:search-toggle): ajout du moteur de recherche masqué
 
-##🧭 Diagrammes d'architecture
-Les diagrammes Mermaid sont dans /docs.
 
-Exemple de rendu :
-
-```mermaid
-flowchart TD
-App["App.jsx"]
-Router["Router"]
-Layout["Layout Component"]
-Header["Header Component"]
-Footer["Footer Component"]
-Pages["Pages (Home, About, Contact)"]
-State["Global State (useContext)"]
-API["API Service"]
-Styles["SCSS 7-1"]
-
-App --> Router
-Router --> Layout
-Layout --> Header
-Layout --> Footer
-Layout --> Pages
-App --> State
-Pages --> API
-Layout --> Styles
-```
 
 ##⚙️ CI / CD
 Le pipeline GitHub Actions :
@@ -123,24 +95,16 @@ Formatage Prettier
 ✅ Daily Commit
 Pour faciliter le commit quotidien :
 
-./scripts/daily-commit.sh
-Le script vous demande si la feature est derrière un flag et génère le message de commit automatiquement.
+./scripts/startday.sh
+./scripts/endday.sh
+
 
 ##🚀 Démarrer le projet
 
 npm run dev
 
-##🛡️ Sécurité
 
-rel="noopener noreferrer" sur tous les liens externes
-Aucun secret dans le code source
-Revue obligatoire avant merge
 
-##📈 Evolutions prévues
-
-Tests unitaires avec Jest
-CI/CD complet avec déploiement
-Documentation des composants Storybook
 
 ## 📚 Liens utiles
 

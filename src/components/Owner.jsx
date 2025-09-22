@@ -1,6 +1,6 @@
 /**
  * ✅ JSDoc : description du composant
- * Ce composant affiche le composant Owner.
+ * Ce composant affiche le composant Owner( image et nom).
  */
 
 import PropTypes from 'prop-types';

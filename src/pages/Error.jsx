@@ -4,21 +4,21 @@
  */
 
 import { Link } from 'react-router-dom';
-import Footer from '../layout/Footer';
 import Main from '../layout/Main';
-import Navbar from '../layout/Navbar';
 import '../styles/pages/_error.scss';
 
 export default function Error() {
   return (
     <div>
-      <Navbar />
       <Main modify="error">
-        <h1 className="h1">404</h1>
-        <h2 className="h2">Oups! La page que vous demandez n&apos; existe pas.</h2>
-        <Link to="/">Retournez sur la page d&apos; accueil </Link>
+        <div className="error">
+          <h1 className="error__code">404</h1>
+          <h2 className="error__text">Oups! La page que vous demandez n&apos; existe pas.</h2>
+          <Link to="/" className="error__link">
+            Retournez sur la page d&apos; accueil{' '}
+          </Link>
+        </div>
       </Main>
-      <Footer />
     </div>
   );
 }

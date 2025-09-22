@@ -14,7 +14,7 @@
     color: $color-light;
     border: none;
     width: 100%;
-    padding: 10px 20px 10px 10px;
+    padding: 5px 10px;
     border-radius: 10px;
     font-size: $font-size-m;
     font-weight: $font-weight-bold;
@@ -32,7 +32,7 @@
   }
 
   &__icon {
-    font-size: 2rem;
+    font-size: 1rem;
     transition: transform 0.3s ease;
 
     &--open {
