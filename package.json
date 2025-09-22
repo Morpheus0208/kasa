@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d dist -t true",
+    "deploy": "gh-pages -d dist",
     "deploy:clean": "gh-pages-clean && npm run build && npm run deploy",
     "lint": "eslint src --ext .js,.jsx",
     "lint:fix": "eslint src --ext .js,.jsx --fix",
