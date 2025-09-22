@@ -20,6 +20,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "gh-pages -d dist -t true",
+    "deploy:clean": "gh-pages-clean && npm run build && npm run deploy",
     "lint": "eslint src --ext .js,.jsx",
     "lint:fix": "eslint src --ext .js,.jsx --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,scss,css,md}'",
@@ -52,6 +54,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^6.3.0",
     "globals": "^16.2.0",
     "husky": "^8.0.3",
     "jsdoc": "^4.0.4",

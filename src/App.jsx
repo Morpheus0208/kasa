@@ -6,7 +6,7 @@
  */
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import DataProvider from './Context/DataProvider';
 import AppRoutes from './routes/AppRoutes';
 import './styles/_app.scss';
