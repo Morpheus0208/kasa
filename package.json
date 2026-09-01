@@ -39,13 +39,13 @@
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.6.3",
-    "react-router-dom": "^7.6.3"
+    "react-router": "^7.18.3",
+    "react-router-dom": "^7.18.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@vitejs/plugin-react": "^4.6.0",
+    "@vitejs/plugin-react": "^6.1.1",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^10.1.8",
@@ -65,6 +65,6 @@
     "stylelint-config-standard-scss": "^15.0.1",
     "stylelint-scss": "^6.12.1",
     "stylelint-selector-bem-pattern": "^4.0.1",
-    "vite": "^7.0.4"
+    "vite": "^8.2.2"
   }
 }
